@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hệ Thống Điểm Danh Khuôn Mặt</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <h1>📋 Hệ Thống Điểm Danh Khuôn Mặt</h1>
+        </header>
+
+        <!-- Navigation -->
+        <nav class="navbar">
+            <button class="nav-btn active" data-tab="dashboard">Trang Chủ</button>
+            <button class="nav-btn" data-tab="register">Đăng Ký</button>
+            <button class="nav-btn" data-tab="attendance">Điểm Danh</button>
+            <button class="nav-btn" data-tab="history">Lịch Sử</button>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="content">
+            <!-- Dashboard Tab -->
+            <section id="dashboard" class="tab-content active">
+                <div class="card">
+                    <h2>Dashboard</h2>
+                    <div class="stats">
+                        <div class="stat-item">
+                            <span class="stat-label">Tổng Nhân Viên</span>
+                            <span class="stat-value" id="totalUsers">0</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">Đã Điểm Danh</span>
+                            <span class="stat-value" id="attendedUsers">0</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">Chưa Điểm Danh</span>
+                            <span class="stat-value" id="absentUsers">0</span>
+                        </div>
+                    </div>
+                    <button class="btn btn-danger" id="clearBtn">🗑️ Xóa Dữ Liệu Hôm Nay</button>
+                </div>
+            </section>
+
+            <!-- Register Tab -->
+            <section id="register" class="tab-content">
+                <div class="card">
+                    <h2>Đăng Ký Nhân Viên</h2>
+                    <form id="registerForm" class="form">
+                        <div class="form-group">
+                            <label for="fullname">Họ và Tên:</label>
+                            <input type="text" id="fullname" required placeholder="Nhập tên nhân viên">
+                        </div>
+                        <div class="form-group">
+                            <label for="employeeId">Mã Nhân Viên:</label>
+                            <input type="text" id="employeeId" required placeholder="VD: NV001">
+                        </div>
+                        <div class="form-group">
+                            <label for="photo">Chọn Ảnh:</label>
+                            <input type="file" id="photo" accept="image/*" required>
+                        </div>
+                        <div id="photoPreview" class="photo-preview"></div>
+                        <button type="submit" class="btn btn-primary">✓ Đăng Ký</button>
+                    </form>
+                </div>
+            </section>
+
+            <!-- Attendance Tab -->
+            <section id="attendance" class="tab-content">
+                <div class="card">
+                    <h2>Điểm Danh</h2>
+                    <div class="camera-section">
+                        <video id="cameraFeed" class="camera-feed" autoplay playsinline></video>
+                        <button class="btn btn-primary" id="captureBtn">📷 Chụp Ảnh</button>
+                    </div>
+                    <div id="attendanceResult" class="result-box"></div>
+                </div>
+            </section>
+
+            <!-- History Tab -->
+            <section id="history" class="tab-content">
+                <div class="card">
+                    <h2>Lịch Sử Điểm Danh</h2>
+                    <div class="filter-group">
+                        <input type="date" id="filterDate" class="filter-input">
+                        <button class="btn btn-secondary" id="searchBtn">🔍 Tìm</button>
+                    </div>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Mã NV</th>
+                                <th>Tên Nhân Viên</th>
+                                <th>Thời Gian</th>
+                                <th>Độ Chính Xác</th>
+                            </tr>
+                        </thead>
+                        <tbody id="historyBody">
+                            <tr>
+                                <td colspan="4" style="text-align: center; color: #999;">Không có dữ liệu</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

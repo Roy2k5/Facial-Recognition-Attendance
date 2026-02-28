@@ -1,0 +1,36 @@
+# Web Framework
+fastapi==0.104.1
+uvicorn[standard]==0.24.0
+python-multipart==0.0.6
+
+# Database
+sqlalchemy==2.0.23
+
+# Pydantic
+pydantic==2.5.0
+pydantic-settings==2.1.0
+
+# Face Recognition
+insightface==0.7.3
+onnxruntime-gpu==1.16.3  # Nếu có GPU
+# onnxruntime==1.16.3  # Nếu chỉ dùng CPU (uncomment dòng này và comment dòng trên)
+
+# Computer Vision
+opencv-python==4.8.1.78
+# opencv-python-headless==4.8.1.78  # Alternative nếu không cần GUI
+
+# Vector Search
+faiss-cpu==1.7.4  # Nếu chỉ dùng CPU
+# faiss-gpu==1.7.4  # Nếu có GPU (uncomment dòng này và comment dòng trên)
+
+# ML/Scientific Computing
+numpy==1.24.3
+scikit-learn==1.3.2
+torch==2.1.0  # Cho InsightFace
+
+# CORS & Middleware
+starlette==0.27.0
+
+# Utilities
+python-dotenv==1.0.0
+pillow==10.1.0

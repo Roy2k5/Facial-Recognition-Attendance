@@ -273,9 +273,9 @@ FacialRecognitionAttendance/
 
 ## 🎬 Demo
 
-![Demo1](Demo/demo1.png)
-![Demo2](Demo/demo2.png)
-![Demo3](Demo/demo3.png)
+![Demo1](demo/demo1.png)
+![Demo2](demo/demo2.png)
+![Demo3](demo/demo3.png)
 
 ## 🗺️ Tương Lai
 
@@ -292,13 +292,10 @@ Hoan nghênh mọi đóng góp!
 
 ---
 
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
+📄 Giấy phép
+Dự án này được cấp phép theo giấy phép MIT – xem tệp [LICENSE](LICENSE) để biết chi tiết.
 ---
-
-## 🙏 Acknowledgments
+🙏 Lời cảm ơn
 
 - [InsightFace](https://github.com/deepinsight/insightface) - Face recognition model
 - [FAISS](https://github.com/facebookresearch/faiss) - Vector similarity search
